@@ -2,7 +2,12 @@ import logging
 from telegram.ext import Updater, CommandHandler, MessageHandler, Filters 
 import settings
 
-logging.basicConfig(filename='bot.log', level=logging.INFO)
+logging.basicConfig(
+    filename='bot.log', 
+    level=logging.INFO, 
+    format='%(asctime)s - %(message)s', 
+    datefmt='%d-%b-%y %H:%M:%S'
+)
 
 
 #PROXY = {'proxy_url': settings.PROXY_URL,
